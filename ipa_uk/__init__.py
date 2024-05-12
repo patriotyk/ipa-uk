@@ -603,8 +603,8 @@ def pronunciation(text: str, check_accent: bool = False) -> str:
         # consonant simplification: ст + ц' → [с'ц']. We do it here because of palatalization.
         # Due to the т +ц → [ц:] rule length is present. According to Орфоепскі словник p. 13,
         # both forms are proper, without length in normal (colloquial) speech and with length
-        # in slow speech, so we parenthesize the length as optional.
-        phonetic = re.sub(r"st͡sʲ([ː]?)", r"sʲt͡sʲ(\1)", phonetic)
+        # in slow speech.
+        phonetic = re.sub(r"st͡sʲ([ː]?)", r"sʲt͡sʲ", phonetic)
 
         # TODO: probably we need to fall back to the endless loop of ipa function
 

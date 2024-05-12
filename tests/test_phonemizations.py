@@ -86,7 +86,7 @@ def test_pronunciation_phonetic_simplification():
     assert ipa("студе́нтський", check_accent=True) == "stʊˈdɛnʲsʲkei̯"
     assert ipa("тури́стський", check_accent=True) == "tʊˈrɪsʲkei̯"
     assert ipa("аге́нтство", check_accent=True) == "ɐˈɦɛnstwɔ"
-    assert ipa("солі́стці", check_accent=True) == "soˈlʲisʲt͡sʲ(ː)i"
+    assert ipa("солі́стці", check_accent=True) == "soˈlʲisʲt͡sʲi"
     assert ipa("шістдеся́т", check_accent=True) == "ʃʲizdeˈsʲat"
     assert ipa("шістсо́т", check_accent=True) == "ʃʲiˈsːɔt"
 
@@ -104,7 +104,7 @@ def test_pronunciation_phonetic_consonant_assimilations_Pugh_p36_37_38():
     assert ipa("підрі́сши", check_accent=True) == "pʲiˈdʲrʲiʃːe"
     assert ipa("кімна́тці", check_accent=True) == "kʲimˈnat͡sʲːi"
     assert ipa("крава́тці", check_accent=True) == "krɐˈʋat͡sʲːi"
-    assert ipa("неві́стці", check_accent=True) == "neˈʋʲisʲt͡sʲ(ː)i"
+    assert ipa("неві́стці", check_accent=True) == "neˈʋʲisʲt͡sʲi"
     assert ipa("борі́дці", check_accent=True) == "boˈrʲid͡zʲt͡sʲi"
     assert ipa("лю́дський", check_accent=True) == "ˈlʲud͡zʲsʲkei̯"
     # Pugh p. 37 claims that it should be sɔlˈdat͡sʲsʲkɪj, but Орфоепскі словник p. 97 claims otherwise
