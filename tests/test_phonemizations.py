@@ -1,4 +1,4 @@
-from ipa_uk import pronunciation as ipa
+from ipa_uk import ipa
 
 
 def test_pronunciation_secondary_stress():
@@ -372,4 +372,7 @@ def test_pronunciation_multiword_expressions():
     assert (
         ipa("Сполу́чені Шта́ти Аме́рики", check_accent=True)
         == "spoˈɫut͡ʃenʲi ˈʃtate ɐˈmɛreke"
+    )
+    assert (
+        ipa("Кра́ще докла́сти зуси́ль для то́гоˈ", check_accent=True) == 'ˈkraʃt͡ʃe dɔˈkɫaste zʊˈsɪlʲ dʲlʲa ˈtɔˈɦɔ'
     )
