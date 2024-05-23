@@ -244,8 +244,8 @@ def ipa(text: str, check_accent: bool = False) -> str:
         for regex, replacement in orthographic_replacements.items():
             phonetic = re.sub(regex, replacement, phonetic)
 
-        # Remap apostrophe to '!' so that it doesn't conflict with IPA stress mark
-        phonetic = re.sub("'", "!", phonetic)
+        # Remap apostrophe to '%' so that it doesn't conflict with IPA stress mark
+        phonetic = re.sub("'", "%", phonetic)
 
         # replace multiple letter sequences
         for replacements in phonetic_chars_map:
@@ -359,7 +359,7 @@ def ipa(text: str, check_accent: bool = False) -> str:
         phonetic = re.sub(r"#j(" + consonant_no_w_c + ")", r"#i̯\1", phonetic)
 
         # remove old orthographic apostrophe
-        phonetic = re.sub(r"!", r"", phonetic)
+        phonetic = re.sub(r"%", r"", phonetic)
         # stress mark in correct place
         # (1) Put the stress mark before the final consonant of a cluster (if any).
         phonetic = re.sub(r"([^#" + vowel + "]?[ʲː]*)([ˈˌ])", r"\2\1", phonetic)

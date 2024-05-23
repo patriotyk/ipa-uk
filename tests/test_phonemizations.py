@@ -374,5 +374,5 @@ def test_pronunciation_multiword_expressions():
         == "spoˈɫut͡ʃenʲi ˈʃtate ɐˈmɛreke"
     )
     assert (
-        ipa("Кра́ще докла́сти зуси́ль для то́гоˈ", check_accent=True) == 'ˈkraʃt͡ʃe dɔˈkɫaste zʊˈsɪlʲ dʲlʲa ˈtɔˈɦɔ'
+        ipa("Кра́ще докла́сти зуси́ль для то́го !?", check_accent=True) == 'ˈkraʃt͡ʃe dɔˈkɫaste zʊˈsɪlʲ dʲlʲa ˈtɔɦɔ !?'
     )
