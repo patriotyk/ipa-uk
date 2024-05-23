@@ -141,7 +141,7 @@ def ipa(text: str, check_accent: bool = False) -> str:
                 )
 
     # convert commas and en/en dashes to IPA foot boundaries
-    text = re.sub(r"\s*[,–—]\s*", " | ", text)
+    # text = re.sub(r"\s*[,–—]\s*", " | ", text)
 
     # canonicalize multiple spaces
     text = re.sub(r"\s+", " ", text)
