@@ -328,8 +328,8 @@ def ipa(text: str, check_accent: bool = False) -> str:
         phonetic = re.sub(r"([^ˈˌ⁀])u", r"\1ʊ", phonetic)
         # unstressed /ɔ/ has by assimilation an allophone [o] before a stressed syllable with /u/ or /i/
         phonetic = re.sub(r"ɔ([bdzʒɡɦmnlrpftskxʲʃ͡]+)([ˈˌ⁀][uiʊ])", r"o\1\2", phonetic)
-        # one allophone [e] covers unstressed /ɛ/ and /ɪ/
-        phonetic = re.sub(r"([^ˈˌ⁀])[ɛɪ]", r"\1e", phonetic)
+        # unstressed /ɛ/ has an allophone /e/
+        phonetic = re.sub(r"([^ˈˌ⁀])[ɛ]", r"\1e", phonetic)
 
         # Remove the monosyllabic stress we auto-added to ensure that vowels in
         # monosyllabic words get stressed allophones. Do this before vocalizing
@@ -347,7 +347,7 @@ def ipa(text: str, check_accent: bool = False) -> str:
         # /ʋ/ has an allophone [β̞] before remaining vowels besides /i/
         # Not sure whether this looks good.
         # phonetic = re.sub("ʋ([ˈˌʲ]*[" .. vowel_no_i .. "])", "β̞\1", phonetic)
-        # /ʋ/ has an allophone [ʍ] before before voiceless consonants (not after a vowel;
+        # /ʋ/ has an allophone [ʍ] before voiceless consonants (not after a vowel;
         # [ʋ] before vowel already converted)
         phonetic = re.sub(r"ʋ([pftskxʃ])", r"ʍ\1", phonetic)
 

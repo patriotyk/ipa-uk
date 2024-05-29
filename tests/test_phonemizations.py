@@ -13,7 +13,7 @@ def test_pronunciation_monosyllabic():
 
 def test_pronunciation_allophones_e_i():
     assert ipa("мене́", check_accent=True) == "meˈnɛ"
-    assert ipa("мине́", check_accent=True) == "meˈnɛ"
+    assert ipa("мине́", check_accent=True) == "mɪˈnɛ"
 
 
 def test_pronunciation_allophones_j():
@@ -21,7 +21,7 @@ def test_pronunciation_allophones_j():
     assert ipa("зна́йте", check_accent=True) == "ˈznai̯te"
     assert ipa("ча́йка", check_accent=True) == "ˈt͡ʃai̯kɐ"
     assert ipa("мій", check_accent=True) == "mʲii̯"
-    assert ipa("йня́ти", check_accent=True) == "ˈi̯nʲate"
+    assert ipa("йня́ти", check_accent=True) == "ˈi̯nʲatɪ"
     assert ipa("йод", check_accent=True) == "jɔd"
     assert ipa("моя́", check_accent=True) == "mɔˈja"
     assert ipa("мою́", check_accent=True) == "mɔˈju"
@@ -42,8 +42,8 @@ def test_pronunciation_allophones_v():
 
 
 def test_pronunciation_voicing_slovnik_no10():
-    assert ipa("відділи́ти", check_accent=True) == "ʋʲidʲːiˈɫɪte"
-    assert ipa("надті́сувати", check_accent=True) == "nɐdʲˈtʲisʊʋɐte"
+    assert ipa("відділи́ти", check_accent=True) == "ʋʲidʲːiˈɫɪtɪ"
+    assert ipa("надті́сувати", check_accent=True) == "nɐdʲˈtʲisʊʋɐtɪ"
 
 
 def test_pronunciation_voicing_slovnik_no6():
@@ -51,19 +51,19 @@ def test_pronunciation_voicing_slovnik_no6():
 
 
 def test_pronunciation_assimilations_slovnik():
-    assert ipa("ви́рісши", check_accent=True) == "ˈʋɪrʲiʃːe"
-    assert ipa("ви́візши", check_accent=True) == "ˈʋɪʋʲiʒʃe"
-    assert ipa("зши́ти", check_accent=True) == "ˈʃːɪte"
-    assert ipa("зжо́вкнути", check_accent=True) == "ˈʒːɔu̯knʊte"
-    assert ipa("безжа́лісний", check_accent=True) == "beˈʒːalʲisnei̯"
-    assert ipa("безче́сний", check_accent=True) == "beʒˈt͡ʃɛsnei̯"
-    assert ipa("зчи́стити", check_accent=True) == "ˈʃt͡ʃɪstete"
+    assert ipa("ви́рісши", check_accent=True) == "ˈʋɪrʲiʃːɪ"
+    assert ipa("ви́візши", check_accent=True) == "ˈʋɪʋʲiʒʃɪ"
+    assert ipa("зши́ти", check_accent=True) == "ˈʃːɪtɪ"
+    assert ipa("зжо́вкнути", check_accent=True) == "ˈʒːɔu̯knʊtɪ"
+    assert ipa("безжа́лісний", check_accent=True) == "beˈʒːalʲisnɪi̯"
+    assert ipa("безче́сний", check_accent=True) == "beʒˈt͡ʃɛsnɪi̯"
+    assert ipa("зчи́стити", check_accent=True) == "ˈʃt͡ʃɪstɪtɪ"
 
 
 def test_pronunciation_assimilations_norm():
     assert ipa("відсі́ль", check_accent=True) == "ʋʲid͡zʲˈsʲilʲ"
     assert ipa("два́дцять", check_accent=True) == "ˈdʋad͡zʲt͡sʲɐtʲ"
-    assert ipa("ро́биться", check_accent=True) == "ˈrɔbet͡sʲːɐ"
+    assert ipa("ро́биться", check_accent=True) == "ˈrɔbɪt͡sʲːɐ"
     assert ipa("кори́тця", check_accent=True) == "kɔˈrɪt͡sʲːɐ"
 
 
@@ -72,19 +72,19 @@ def test_pronunciation_phonetic_lengthened_consonants():
     assert ipa("рілля́", check_accent=True) == "rʲiˈlʲːa"
     assert ipa("ті́нню", check_accent=True) == "ˈtʲinʲːʊ"
     assert ipa("ллю", check_accent=True) == "lʲːu"
-    assert ipa("обби́ти", check_accent=True) == "ɔˈbːɪte"
-    assert ipa("зако́нний", check_accent=True) == "zɐˈkɔnːei̯"
+    assert ipa("обби́ти", check_accent=True) == "ɔˈbːɪtɪ"
+    assert ipa("зако́нний", check_accent=True) == "zɐˈkɔnːɪi̯"
     assert ipa("вітчи́зна", check_accent=True) == "ʋʲiˈt͡ʃːɪznɐ"
     assert ipa("болі́тце", check_accent=True) == "boˈlʲit͡sːe"
-    assert ipa("ви́нісши", check_accent=True) == "ˈʋɪnʲiʃːe"
-    assert ipa("зжува́ти", check_accent=True) == "ʒːʊˈʋate"
+    assert ipa("ви́нісши", check_accent=True) == "ˈʋɪnʲiʃːɪ"
+    assert ipa("зжува́ти", check_accent=True) == "ʒːʊˈʋatɪ"
     assert ipa("бере́шся", check_accent=True) == "beˈrɛsʲːɐ"
     assert ipa("бері́ться", check_accent=True) == "beˈrʲit͡sʲːɐ"
 
 
 def test_pronunciation_phonetic_simplification():
-    assert ipa("студе́нтський", check_accent=True) == "stʊˈdɛnʲsʲkei̯"
-    assert ipa("тури́стський", check_accent=True) == "tʊˈrɪsʲkei̯"
+    assert ipa("студе́нтський", check_accent=True) == "stʊˈdɛnʲsʲkɪi̯"
+    assert ipa("тури́стський", check_accent=True) == "tʊˈrɪsʲkɪi̯"
     assert ipa("аге́нтство", check_accent=True) == "ɐˈɦɛnstwɔ"
     assert ipa("солі́стці", check_accent=True) == "soˈlʲisʲt͡sʲi"
     assert ipa("шістдеся́т", check_accent=True) == "ʃʲizdeˈsʲat"
@@ -96,25 +96,25 @@ def test_pronunciation_phonetic_consonant_assimilations_Pugh_p36_37_38():
     assert ipa("кни́жці", check_accent=True) == "ˈknɪzʲt͡sʲi"
     assert ipa("дочка́", check_accent=True) == "dɔt͡ʃˈka"
     assert ipa("дочці́", check_accent=True) == "dɔˈt͡sʲːi"
-    assert ipa("чита́єш", check_accent=True) == "t͡ʃeˈtajeʃ"
+    assert ipa("чита́єш", check_accent=True) == "t͡ʃɪˈtajeʃ"
     assert ipa("сміє́шся", check_accent=True) == "sʲmʲiˈjɛsʲːɐ"
     assert ipa("до́шка", check_accent=True) == "ˈdɔʃkɐ"
     assert ipa("до́шці", check_accent=True) == "ˈdɔsʲt͡sʲi"
-    assert ipa("безжа́лісний", check_accent=True) == "beˈʒːalʲisnei̯"
-    assert ipa("підрі́сши", check_accent=True) == "pʲiˈdʲrʲiʃːe"
+    assert ipa("безжа́лісний", check_accent=True) == "beˈʒːalʲisnɪi̯"
+    assert ipa("підрі́сши", check_accent=True) == "pʲiˈdʲrʲiʃːɪ"
     assert ipa("кімна́тці", check_accent=True) == "kʲimˈnat͡sʲːi"
     assert ipa("крава́тці", check_accent=True) == "krɐˈʋat͡sʲːi"
     assert ipa("неві́стці", check_accent=True) == "neˈʋʲisʲt͡sʲi"
     assert ipa("борі́дці", check_accent=True) == "boˈrʲid͡zʲt͡sʲi"
-    assert ipa("лю́дський", check_accent=True) == "ˈlʲud͡zʲsʲkei̯"
+    assert ipa("лю́дський", check_accent=True) == "ˈlʲud͡zʲsʲkɪi̯"
     # Pugh p. 37 claims that it should be sɔlˈdat͡sʲsʲkɪj, but Орфоепскі словник p. 97 claims otherwise
-    assert ipa("солда́тський", check_accent=True) == "sɔɫˈdat͡sʲkei̯"
+    assert ipa("солда́тський", check_accent=True) == "sɔɫˈdat͡sʲkɪi̯"
 
 
 def test_pronunciation_phonetic_apostrophe_Pugh_p32():
     assert ipa("від'ї́зд", check_accent=True) == "ʋʲiˈdjizd"
     assert ipa("п'ю", check_accent=True) == "pju"
-    assert ipa("ф'ю́кати", check_accent=True) == "ˈfjukɐte"
+    assert ipa("ф'ю́кати", check_accent=True) == "ˈfjukɐtɪ"
     assert ipa("об'є́кт", check_accent=True) == "ɔˈbjɛkt"
     assert ipa("п'ять", check_accent=True) == "pjatʲ"
     assert ipa("здоро́в'я", check_accent=True) == "zdɔˈrɔʋjɐ"
@@ -133,7 +133,7 @@ def test_pronunciation_phonetic_Pugh_p29_p30():
     assert ipa("дзво́на", check_accent=True) == "ˈd͡zwɔnɐ"
     assert ipa("ра́са", check_accent=True) == "ˈrasɐ"
     assert ipa("ря́са", check_accent=True) == "ˈrʲasɐ"
-    assert ipa("бі́лий", check_accent=True) == "ˈbʲiɫei̯"
+    assert ipa("бі́лий", check_accent=True) == "ˈbʲiɫɪi̯"
     assert ipa("вів", check_accent=True) == "ʋʲiu̯"
     assert ipa("кінь", check_accent=True) == "kʲinʲ"
     assert ipa("шість", check_accent=True) == "ʃʲisʲtʲ"
@@ -153,19 +153,19 @@ def test_pronunciation_phonetic_ja_je_ju():
     assert ipa("а́я", check_accent=True) == "ˈajɐ"
     assert ipa("ея́", check_accent=True) == "eˈja"
     assert ipa("і́я", check_accent=True) == "ˈijɐ"
-    assert ipa("ия́", check_accent=True) == "eˈja"
+    assert ipa("ия́", check_accent=True) == "ɪˈja"
     assert ipa("о́я", check_accent=True) == "ˈɔjɐ"
     assert ipa("уя́", check_accent=True) == "ʊˈja"
     assert ipa("а́є", check_accent=True) == "ˈaje"
     assert ipa("еє́", check_accent=True) == "eˈjɛ"
     assert ipa("і́є", check_accent=True) == "ˈije"
-    assert ipa("иє́", check_accent=True) == "eˈjɛ"
+    assert ipa("иє́", check_accent=True) == "ɪˈjɛ"
     assert ipa("о́є", check_accent=True) == "ˈɔje"
     assert ipa("ую́", check_accent=True) == "ʊˈju"
     assert ipa("а́ю", check_accent=True) == "ˈajʊ"
     assert ipa("ею́", check_accent=True) == "eˈju"
     assert ipa("і́ю", check_accent=True) == "ˈijʊ"
-    assert ipa("ию́", check_accent=True) == "eˈju"
+    assert ipa("ию́", check_accent=True) == "ɪˈju"
     assert ipa("о́ю", check_accent=True) == "ˈɔjʊ"
     assert ipa("ую́", check_accent=True) == "ʊˈju"
     assert ipa("'я", check_accent=False) == "jɐ"
@@ -319,10 +319,10 @@ def test_pronunciation_phonetic_hard_soft_sign():
 
 
 def test_pronunciation_phonetic_dual_pronunciation_prefix_bez_roz():
-    assert ipa("розписа́ти", check_accent=True) == "rɔzpeˈsate"
-    assert ipa("росписа́ти", check_accent=True) == "rɔspeˈsate"
-    assert ipa("безпла́тний", check_accent=True) == "bezˈpɫatnei̯"
-    assert ipa("беспла́тний", check_accent=True) == "beˈspɫatnei̯"
+    assert ipa("розписа́ти", check_accent=True) == "rɔzpɪˈsatɪ"
+    assert ipa("росписа́ти", check_accent=True) == "rɔspɪˈsatɪ"
+    assert ipa("безпла́тний", check_accent=True) == "bezˈpɫatnɪi̯"
+    assert ipa("беспла́тний", check_accent=True) == "beˈspɫatnɪi̯"
 
 
 def test_pronunciation_phonetic_assimilation_voiceless_voiced():
@@ -335,9 +335,9 @@ def test_pronunciation_phonetic_assimilation_voiceless_voiced():
 
 def test_pronunciation_phonetic_basic():
     assert ipa("ходжу́", check_accent=True) == "xoˈd͡ʒu"
-    assert ipa("джи́нси", check_accent=True) == "ˈd͡ʒɪnse"
+    assert ipa("джи́нси", check_accent=True) == "ˈd͡ʒɪnsɪ"
     assert ipa("дзе́ркало", check_accent=True) == "ˈd͡zɛrkɐɫɔ"
-    assert ipa("дзво́ник", check_accent=True) == "ˈd͡zwɔnek"
+    assert ipa("дзво́ник", check_accent=True) == "ˈd͡zwɔnɪk"
     assert ipa("дзьоб", check_accent=True) == "d͡zʲɔb"
     assert ipa("агре́сія", check_accent=True) == "ɐˈɦrɛsʲijɐ"
     assert ipa("шви́дше", check_accent=True) == "ˈʃʋɪd͡ʒʃe"
@@ -357,22 +357,22 @@ def test_pronunciation_phonetic_basic():
 
 
 def test_pronunciation_phonetic_diphonemic_dz_dzh_dsh_dch():
-    assert ipa("піджжива́ти", check_accent=True) == "pʲid͡ʒʒeˈʋate"
-    assert ipa("віджжи́лий", check_accent=True) == "ʋʲid͡ʒˈʒɪɫei̯"
-    assert ipa("підззе́мний", check_accent=True) == "pʲid͡zˈzɛmnei̯"
-    assert ipa("підззира́ти", check_accent=True) == "pʲid͡zzeˈrate"
-    assert ipa("відшу́кувати", check_accent=True) == "ʋʲid͡ʒˈʃukʊʋɐte"
+    assert ipa("піджжива́ти", check_accent=True) == "pʲid͡ʒʒɪˈʋatɪ"
+    assert ipa("віджжи́лий", check_accent=True) == "ʋʲid͡ʒˈʒɪɫɪi̯"
+    assert ipa("підззе́мний", check_accent=True) == "pʲid͡zˈzɛmnɪi̯"
+    assert ipa("підззира́ти", check_accent=True) == "pʲid͡zzɪˈratɪ"
+    assert ipa("відшу́кувати", check_accent=True) == "ʋʲid͡ʒˈʃukʊʋɐtɪ"
     assert ipa("відчуття́", check_accent=True) == "ʋʲid͡ʒt͡ʃʊˈtʲːa"
-    assert ipa("відці́джувати", check_accent=True) == "ʋʲid͡zʲˈt͡sʲid͡ʒʊʋɐte"
-    assert ipa("відцвіта́ти", check_accent=True) == "ʋʲid͡zt͡sʲʋʲiˈtate"
+    assert ipa("відці́джувати", check_accent=True) == "ʋʲid͡zʲˈt͡sʲid͡ʒʊʋɐtɪ"
+    assert ipa("відцвіта́ти", check_accent=True) == "ʋʲid͡zt͡sʲʋʲiˈtatɪ"
 
 
 def test_pronunciation_multiword_expressions():
     # initial stress in a medial word formerly not handled correctly
     assert (
         ipa("Сполу́чені Шта́ти Аме́рики", check_accent=True)
-        == "spoˈɫut͡ʃenʲi ˈʃtate ɐˈmɛreke"
+        == "spoˈɫut͡ʃenʲi ˈʃtatɪ ɐˈmɛrɪkɪ"
     )
     assert (
-        ipa("Кра́ще докла́сти зуси́ль для то́го !?", check_accent=True) == 'ˈkraʃt͡ʃe dɔˈkɫaste zʊˈsɪlʲ dʲlʲa ˈtɔɦɔ !?'
+        ipa("Кра́ще докла́сти зуси́ль для то́го !?", check_accent=True) == 'ˈkraʃt͡ʃe dɔˈkɫastɪ zʊˈsɪlʲ dʲlʲa ˈtɔɦɔ !?'
     )
