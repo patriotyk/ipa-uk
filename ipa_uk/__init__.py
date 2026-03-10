@@ -11,7 +11,7 @@ the second letter: pass віджжи́лий instead of віджи́лий, пі
 
 import re
 import unicodedata
-from typing import List, Dict
+from typing import Dict, List
 
 __all__ = [
     "AccentIsMissing",
@@ -22,7 +22,6 @@ __all__ = [
 
 ACUTE = chr(0x301)
 GRAVE = chr(0x300)
-
 
 
 class AccentIsMissing(ValueError):
@@ -291,7 +290,7 @@ def ipa(text: str, check_accent: bool = False) -> str:
         # In the sequence of two consonants, of which the second is soft, the first is pronounced soft too
         # unless the first consonant is a labial, namely б, п, в, ф, м.
 
-        phonetic = re.sub(r"([tdsznl])(.)ʲ", r"\1ʲ\2ʲ", phonetic)
+        phonetic = re.sub(r"([tdszn])(.)ʲ", r"\1ʲ\2ʲ", phonetic)
         phonetic = re.sub(r"([tdsznl])t͡sʲ", r"\1ʲt͡sʲ", phonetic)
         phonetic = re.sub(r"([tdsznl])d͡zʲ", r"\1ʲd͡zʲ", phonetic)
         phonetic = re.sub(r"t͡s(.)ʲ", r"t͡sʲ\1ʲ", phonetic)

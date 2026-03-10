@@ -367,6 +367,14 @@ def test_pronunciation_phonetic_diphonemic_dz_dzh_dsh_dch():
     assert ipa("відцвіта́ти", check_accent=True) == "ʋʲid͡zt͡sʲʋʲiˈtatɪ"
 
 
+def test_doubling_of_soft_consonants():
+    assert (
+        ipa("ґвалтівни́к прийшо́в ґвалтува́ти ва́с", check_accent=True)
+        == "ɡʋɐɫtʲiu̯ˈnɪk prɪi̯ˈʃɔu̯ ɡʋɐɫtʊˈʋatɪ ˈʋas"
+    )
+    assert ipa("рілля́", check_accent=True) == "rʲiˈlʲːa"
+
+
 def test_pronunciation_multiword_expressions():
     # initial stress in a medial word formerly not handled correctly
     assert (
@@ -374,5 +382,6 @@ def test_pronunciation_multiword_expressions():
         == "spoˈɫut͡ʃenʲi ˈʃtatɪ ɐˈmɛrɪkɪ"
     )
     assert (
-        ipa("Кра́ще докла́сти зуси́ль для то́го !?", check_accent=True) == 'ˈkraʃt͡ʃe dɔˈkɫastɪ zʊˈsɪlʲ dʲlʲa ˈtɔɦɔ !?'
+        ipa("Кра́ще докла́сти зуси́ль для то́го !?", check_accent=True)
+        == "ˈkraʃt͡ʃe dɔˈkɫastɪ zʊˈsɪlʲ dʲlʲa ˈtɔɦɔ !?"
     )
